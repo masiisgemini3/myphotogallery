@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Photo Gallery</title>
+  <style>
+    body { font-family: Arial; text-align: center; background: #f0f2f5; }
+    h1 { color: #333; }
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px; max-width: 1200px; }
+    img { width: 150px; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .upload-form { margin: 20px; padding: 20px; background: white; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <h1>My Photo Gallery</h1>
+  <div class="upload-form">
+    <h3>Upload New Photo</h3>
+    <form id="uploadForm">
+      <input type="text" name="title" placeholder="Title (optional)" />
+      <input type="file" name="file" accept="image/*" required />
+      <button type="submit">Upload</button>
+    </form>
+  </div>
+  <div class="gallery" id="gallery"></div>
+  <script src="app.js"></script>
+</body>
+</html>
